@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>PassGen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="HTML5 website template">
+        <meta name="keywords" content="global, template, html, sass, jquery">
+        <meta name="author" content="Stephen Oduor">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+
+    </head>
+<body>
+    <form action="#" method="POST" class="signupForm">
+        <h2>Generate Password</h2>
+        <ul class="noBullet">
+            <li>
+                <label for="passwordLength">Password Length</label>
+                <select class="inputFields" id="passwordLength" name="passwordLength" required>
+                    <optgroup label="Weak">
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </optgroup>
+                    <optgroup label="Medium">
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </optgroup>
+                    <optgroup label="Strong">
+                        <option value="12" selected>12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                    </optgroup>
+                </select>
+            </li>
+            <li>
+                <label for="quantity">Number of Passwords</label>
+                <select class="inputFields" id="quantity" name="quantity" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                </select>
+            </li>
+            <li><label>Include Numbers</label><input type="checkbox" id="includeNumbers" checked> (e.g. 12345)</li>
+            <li><label>Include Lowercase Characters</label><input type="checkbox" id="includeLowercase" checked> (e.g. abcdef)</li>
+            <li><label>Include Uppercase Characters</label><input type="checkbox" id="includeUppercase" checked> (e.g. ABCDEF)</li>
+            <li><label>Include Symbols</label><input type="checkbox" id="includeSymbols" checked></li>
+            <li><label>No Similar Characters</label><input type="checkbox" id="noSimilar" checked> (e.g. i, l, 1, L, o, 0)</li>
+            <li><label>No Duplicate Characters</label><input type="checkbox" id="noDuplicate" checked></li>
+            <li><label>No Sequential Characters</label><input type="checkbox" id="noSequential" checked></li>
+            <li id="center-btn">
+                <button type="button" id="join-btn" onclick="generatePasswords()">Generate</button>
+            </li>
+        </ul>
+    </form>
+
+    <div id="passwordsContainer"></div>
+</body>
+</html>
